@@ -1,0 +1,7 @@
+{
+    "name": "arthur4ires/ext-bcmath",
+    "description": "ext-bcmath",
+    "require": {
+        "php": ">=1.0"
+    }
+}
